@@ -22,7 +22,13 @@ const router = require('./router.js');
 //mongo bongo
 const dbURL = process.env.MONGODB_URI || 'mongodb://localhost/Sprout';
 
-mongoose.connect(dbURL, (err) => {
+const mongooseOptions = {
+  useNewUrlParser: true, 
+  useUnifiedTopology: true,
+  useCreateIndex: true,
+}
+
+mongoose.connect(dbURL, mongooseOptions, (err) => {
   if (err) {
     console.log('Could not connect to database');
     throw err;
