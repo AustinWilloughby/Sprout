@@ -43,10 +43,10 @@ let redisURL = {
 
 let redisPASS = 'sxQiggVY5xDl80DDHUX0KIjPE62XwQSJ';
 
-if (process.env.REDISCLOUD_URL) {
-  redisURL = url.parse(process.env.REDISCLOUD_URL);
-  redisPASS = redisURL.auth.split(':')[1];
-}
+//if (process.env.REDISCLOUD_URL) {
+//  redisURL = url.parse(process.env.REDISCLOUD_URL);
+//  redisPASS = redisURL.auth.split(':')[1];
+//}
 
 
 const app = express();
